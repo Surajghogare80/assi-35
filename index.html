@@ -67,7 +67,17 @@
             scroll.src = arr[index];
         }
 
-       
+        function left(){
+           if(index>0){
+            index--;
+           }
+           else{
+            index = arr.length -1
+
+           }
+ 
+             scroll.src = arr[index];
+         }
          
 
          setInterval(right , 2000)
