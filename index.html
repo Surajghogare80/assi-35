@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <style>
+        .mobile-container{
+            width: fit-content;
+            margin: 70px auto;
+            position: relative;
+        }
+       .mobile-img{
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+        border-radius: 20px;
+        cursor: pointer;
+       }
+       .head{
+        text-align: center;
+        padding: 20px;
+       }
+       .common{
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        transition:0.5s ;
+       }
+       .left{
+        left: 0px;
+        cursor: pointer;
+       }
+       
+       .right{
+        right: 0px;
+        cursor: pointer;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <h1 class="head">Mobiles </h1>
+    <div class="mobile-container">  
+     <img src="./blue.jpg" class="mobile-img" id="main"/>
+     <img src="./left.png" class=" common left" onclick="left()"/>
+     <img src="./right.png" class=" common right" onclick="right()"/>
+     
+    </div>
+    <script>
+        const arr = [ './blue.jpg' ,'./pink.jpg' , './white.jpg' , './black.jpg' , 
+        './green.jpg']
+
+        let index = 0;
+        
+        const scroll = document.getElementById('main')
+
+        function right(){
+           if( index < arr.length -1){
+            index++;
+           }
+           else{
+            index= 0;
+           }
+
+            scroll.src = arr[index];
+        }
+
+       
+         
+
+        
+
+    </script>
+</body>
+</html>
